@@ -116,6 +116,7 @@ public class ListaDinamica implements ListaOperacoes {
         }  return removidos;
     }
 
+    @Override
     public int contar() {
         int count = 0;
         No aux = inicio;
@@ -127,6 +128,7 @@ public class ListaDinamica implements ListaOperacoes {
         return count;
     }
 
+    @Override
     public int adicionarVarios(String[] elementos) {
         int adicionados = 0;
         for (int i = 0; i < elementos.length; i++) {
@@ -136,6 +138,7 @@ public class ListaDinamica implements ListaOperacoes {
         return adicionados;
     }
 
+    @Override
     public String obter(int indice) {
       if (indice < 0) 
         return null; 
@@ -153,6 +156,7 @@ public class ListaDinamica implements ListaOperacoes {
         return null;
     }
 
+    @Override
     public boolean inserir(int indice, String elemento) {
         if (indice < 0) 
           return false;
@@ -178,6 +182,7 @@ public class ListaDinamica implements ListaOperacoes {
         return true;
     }
 
+    @Override
     public String removerPorIndice(int indice) {
         if (indice < 0) 
           return null;
@@ -200,10 +205,12 @@ public class ListaDinamica implements ListaOperacoes {
         return removido;
     }
 
+    @Override
     public void limpar() {
         inicio = new No(null);
     }
 
+    @Override
     public int ultimoIndiceDe(String elemento) {
         int indice = -1;
         int i = 0;
@@ -219,6 +226,7 @@ public class ListaDinamica implements ListaOperacoes {
         return indice;
     }
 
+    @Override
     public int contarOcorrencias(String elemento) {
         int count = 0;
         No aux = inicio;
@@ -232,6 +240,7 @@ public class ListaDinamica implements ListaOperacoes {
         return count;
     }
 
+    @Override
     public int substituir(String antigo, String novo) {
         int count = 0;
         No aux = inicio;
