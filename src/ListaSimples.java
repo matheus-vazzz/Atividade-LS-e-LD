@@ -86,6 +86,7 @@ public class ListaSimples implements ListaOperacoes {
         }
     }
 
+    @Override
     public int removerTodas(String elemento) {
         int removidos = 0;
         for (int i = 0; i < lista.length; i++) {
@@ -96,6 +97,7 @@ public class ListaSimples implements ListaOperacoes {
         }  return removidos;
     }
 
+    @Override
     public int contar() {
         int count = 0;
         for (int i = 0; i < lista.length; i++) {
@@ -105,6 +107,7 @@ public class ListaSimples implements ListaOperacoes {
         }  return count;
     }
 
+    @Override
     public int adicionarVarios(String[] elementos) {
         int adicionados = 0;
         for (int i = 0; i < elementos.length; i++) {
@@ -115,6 +118,7 @@ public class ListaSimples implements ListaOperacoes {
         }  return adicionados;
     }
 
+    @Override
     public String obter(int indice) {
         if (indice < 0 || indice >= lista.length) {
             return null;
@@ -122,6 +126,7 @@ public class ListaSimples implements ListaOperacoes {
       return lista[indice];
     }
 
+    @Override
     public boolean inserir(int indice, String elemento) {
         if (indice < 0 || indice >= lista.length || estaCheia()) {
             return false;
@@ -133,6 +138,7 @@ public class ListaSimples implements ListaOperacoes {
         return true;
     }
 
+    @Override
     public String removerPorIndice(int indice) {
         if (indice < 0 || indice >= lista.length) {
             return null;
@@ -146,12 +152,14 @@ public class ListaSimples implements ListaOperacoes {
         return removido;
     }
 
+    @Override
     public void limpar() {
         for (int i = 0; i < lista.length; i++) {
             lista[i] = null;
         }
     }
 
+    @Override
     public int ultimoIndiceDe(String elemento) {
         for (int i = lista.length - 1; i >= 0; i--) {
             if (lista[i] != null && lista[i].equals(elemento)) {
@@ -160,6 +168,7 @@ public class ListaSimples implements ListaOperacoes {
         }  return -1;
     }
 
+    @Override
     public int contarOcorrencias(String elemento) {
         int count = 0;
         for (int i = 0; i < lista.length; i++) {
@@ -169,6 +178,7 @@ public class ListaSimples implements ListaOperacoes {
         }  return count;
     }
 
+    @Override
     public int substituir(String antigo, String novo) {
         int count = 0;
         for (int i = 0; i < lista.length; i++) {
